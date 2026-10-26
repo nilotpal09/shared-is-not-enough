@@ -1,0 +1,210 @@
+\documentclass[border=0pt]{standalone}
+\usepackage{fontspec}
+\setmainfont{texgyreheros}[Extension=.otf,UprightFont=*-regular,ItalicFont=*-italic,BoldFont=*-bold,BoldItalicFont=*-bolditalic]
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\definecolor{ink}{HTML}{1E1E1E}\definecolor{ink2}{HTML}{6E6E6E}\definecolor{arr}{HTML}{454545}
+\definecolor{framec}{HTML}{8C8C8C}
+\definecolor{gfill}{HTML}{D5E8D4}\definecolor{gline}{HTML}{82B366}
+\definecolor{yfill}{HTML}{FFF2CC}\definecolor{yline}{HTML}{D6B656}
+\definecolor{bfill}{HTML}{DAE8FC}\definecolor{bline}{HTML}{6C8EBF}
+\definecolor{oline}{HTML}{F97015}\definecolor{otext}{HTML}{F07A22}
+\definecolor{legline}{HTML}{8C8C8C}\definecolor{latc}{HTML}{6A55C8}
+\definecolor{b2line}{HTML}{A7ADB3}\definecolor{b2panel}{HTML}{F3F4F5}\definecolor{b2arr}{HTML}{5F6368}\definecolor{b2blue}{HTML}{2A78D6}
+\definecolor{blob3}{RGB}{206,191,232}\definecolor{blob2}{RGB}{172,145,213}\definecolor{blob1}{RGB}{127,93,180}
+\begin{document}
+\begin{tikzpicture}[x=1pt,y=-1pt]
+\path[use as bounding box] (0,0) rectangle (469.755,292.0357142857143);
+\node[anchor=base,inner sep=0pt,text=ink,font={\fontsize{7.5}{9.00}\selectfont}] at (62.00,9.00) {\textbf{Single-view condition}};
+\node[anchor=base,inner sep=0pt,text=ink,font={\fontsize{7.5}{9.00}\selectfont}] at (261.00,9.00) {\textbf{Shared, redrawn and constant conditions}};
+\path[fill=white,rounded corners=3pt,draw=b2line,line width=0.5pt] (18.00,16.00) rectangle (106.00,38.00);
+\node[anchor=base,inner sep=0pt,text=ink,font={\fontsize{7.5}{9.00}\selectfont}] at (62.00,25.50) {Components};
+\node[anchor=base,inner sep=0pt,text=ink2,font={\fontsize{7.0}{8.40}\selectfont}] at (62.00,34.00) {positions, energies};
+\path[fill=white,rounded corners=3pt,draw=b2line,line width=0.5pt] (217.00,16.00) rectangle (305.00,38.00);
+\node[anchor=base,inner sep=0pt,text=ink,font={\fontsize{7.5}{9.00}\selectfont}] at (261.00,25.50) {Components};
+\node[anchor=base,inner sep=0pt,text=ink2,font={\fontsize{7.0}{8.40}\selectfont}] at (261.00,34.00) {positions, energies};
+\path[fill=b2panel,rounded corners=4pt] (14.00,68.00) rectangle (110.00,102.00);
+\node[anchor=base,inner sep=0pt,text=ink,font={\fontsize{7.5}{9.00}\selectfont}] at (62.00,81.00) {\textbf{Generator}};
+\node[anchor=base,inner sep=0pt,text=ink2,font={\fontsize{7.0}{8.40}\selectfont}] at (62.00,92.00) {one run};
+\draw[b2arr,line width=0.6pt,-{Stealth[length=4.0pt,width=3.6pt,inset=0.8pt]}] (62.00,38.00) -- (62.00,68.00);
+\path[fill=b2panel,rounded corners=4pt] (163.00,46.00) rectangle (359.00,124.00);
+\node[anchor=base,inner sep=0pt,text=ink,font={\fontsize{7.5}{9.00}\selectfont}] at (261.00,56.50) {\textbf{Generator}};
+\draw[b2arr,line width=0.6pt,rounded corners=3pt,-{Stealth[length=4.0pt,width=3.6pt,inset=0.8pt]}] (255.12,38.00) -- (212.00,46.00) -- (212.00,62.00);
+\path[fill=white,rounded corners=3pt,draw=b2line,line width=0.5pt] (171.00,62.00) rectangle (253.00,86.00);
+\node[anchor=base,inner sep=0pt,text=ink,font={\fontsize{7.5}{9.00}\selectfont}] at (212.00,72.00) {Stage 1};
+\node[anchor=base,inner sep=0pt,text=ink2,font={\fontsize{7.0}{8.40}\selectfont}] at (212.00,81.50) {shape (\textit{α}, \textit{T})};
+\path[fill=white,rounded corners=3pt,draw=b2line,line width=0.5pt] (171.00,96.00) rectangle (253.00,120.00);
+\node[anchor=base,inner sep=0pt,text=ink,font={\fontsize{7.5}{9.00}\selectfont}] at (212.00,106.00) {Stage 2};
+\node[anchor=base,inner sep=0pt,text=ink2,font={\fontsize{7.0}{8.40}\selectfont}] at (212.00,115.50) {image sampling};
+\draw[b2arr,line width=0.6pt,-{Stealth[length=4.0pt,width=3.6pt,inset=0.8pt]}] (212.00,86.00) -- (212.00,96.00);
+\draw[b2arr,line width=0.6pt,rounded corners=3pt,-{Stealth[length=4.0pt,width=3.6pt,inset=0.8pt]}] (266.88,38.00) -- (310.00,46.00) -- (310.00,62.00);
+\path[fill=white,rounded corners=3pt,draw=b2line,line width=0.5pt] (269.00,62.00) rectangle (351.00,86.00);
+\node[anchor=base,inner sep=0pt,text=ink,font={\fontsize{7.5}{9.00}\selectfont}] at (310.00,72.00) {Stage 1};
+\node[anchor=base,inner sep=0pt,text=ink2,font={\fontsize{7.0}{8.40}\selectfont}] at (310.00,81.50) {shape (\textit{α}, \textit{T})};
+\path[fill=white,rounded corners=3pt,draw=b2line,line width=0.5pt] (269.00,96.00) rectangle (351.00,120.00);
+\node[anchor=base,inner sep=0pt,text=ink,font={\fontsize{7.5}{9.00}\selectfont}] at (310.00,106.00) {Stage 2};
+\node[anchor=base,inner sep=0pt,text=ink2,font={\fontsize{7.0}{8.40}\selectfont}] at (310.00,115.50) {image sampling};
+\draw[b2arr,line width=0.6pt,-{Stealth[length=4.0pt,width=3.6pt,inset=0.8pt]}] (310.00,86.00) -- (310.00,96.00);
+\path[fill=white,rounded corners=3pt,draw=b2line,line width=0.5pt] (368.00,46.00) rectangle (465.00,140.00);
+\node[anchor=base west,inner sep=0pt,text=ink2,font={\fontsize{7.0}{8.40}\selectfont}] at (375.00,56.50) {\textbf{shape in run 2}};
+\node[anchor=base west,inner sep=0pt,text=ink,font={\fontsize{7.0}{8.40}\selectfont}] at (375.00,69.00) {\textbf{shared}};
+\node[anchor=base west,inner sep=0pt,text=ink2,font={\fontsize{7.0}{8.40}\selectfont}] at (375.00,77.50) {same as run 1};
+\node[anchor=base west,inner sep=0pt,text=ink,font={\fontsize{7.0}{8.40}\selectfont}] at (375.00,87.50) {\textbf{redrawn}};
+\node[anchor=base west,inner sep=0pt,text=ink2,font={\fontsize{7.0}{8.40}\selectfont}] at (375.00,96.00) {new};
+\node[anchor=base west,inner sep=0pt,text=ink,font={\fontsize{7.0}{8.40}\selectfont}] at (375.00,106.00) {\textbf{constant}};
+\node[anchor=base west,inner sep=0pt,text=ink2,font={\fontsize{7.0}{8.40}\selectfont}] at (375.00,114.50) {fixed for all samples};
+\draw[b2line,line width=0.5pt] (375.00,119) -- (458.00,119);
+\node[anchor=base west,inner sep=0pt,text=ink2,font={\fontsize{7.0}{8.40}\selectfont}] at (375.00,128.50) {image sampling};
+\node[anchor=base west,inner sep=0pt,text=ink2,font={\fontsize{7.0}{8.40}\selectfont}] at (375.00,137.00) {new in every run};
+\begin{scope}
+\clip (40.00,136.00) rectangle (84.00,178.04);
+\fill[white] (40.00,136.00) rectangle (84.00,178.04);
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (65.77,156.82) circle (10.42pt);\fill[blob2] (65.77,156.82) circle (6.95pt);\fill[blob1] (65.77,156.82) circle (3.47pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (52.89,168.37) circle (7.78pt);\fill[blob2] (52.89,168.37) circle (5.19pt);\fill[blob1] (52.89,168.37) circle (2.59pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (62.47,167.43) circle (6.84pt);\fill[blob2] (62.47,167.43) circle (4.56pt);\fill[blob1] (62.47,167.43) circle (2.28pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (45.58,153.91) circle (4.29pt);\fill[blob2] (45.58,153.91) circle (2.86pt);\fill[blob1] (45.58,153.91) circle (1.43pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (55.16,145.66) circle (3.54pt);\fill[blob2] (55.16,145.66) circle (2.36pt);\fill[blob1] (55.16,145.66) circle (1.18pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (74.57,151.79) circle (3.54pt);\fill[blob2] (74.57,151.79) circle (2.36pt);\fill[blob1] (74.57,151.79) circle (1.18pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (67.66,147.31) circle (2.00pt);\fill[blob2] (67.66,147.31) circle (1.34pt);\fill[blob1] (67.66,147.31) circle (0.67pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (75.36,166.49) circle (1.93pt);\fill[blob2] (75.36,166.49) circle (1.29pt);\fill[blob1] (75.36,166.49) circle (0.64pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (59.80,158.94) circle (1.89pt);\fill[blob2] (59.80,158.94) circle (1.26pt);\fill[blob1] (59.80,158.94) circle (0.63pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (76.30,143.15) circle (1.65pt);\fill[blob2] (76.30,143.15) circle (1.10pt);\fill[blob1] (76.30,143.15) circle (0.55pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (73.79,158.79) circle (1.53pt);\fill[blob2] (73.79,158.79) circle (1.02pt);\fill[blob1] (73.79,158.79) circle (0.51pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (80.70,155.64) circle (1.23pt);\fill[blob2] (80.70,155.64) circle (0.82pt);\fill[blob1] (80.70,155.64) circle (0.41pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (49.43,161.06) circle (0.99pt);\fill[blob2] (49.43,161.06) circle (0.66pt);\fill[blob1] (49.43,161.06) circle (0.33pt);\end{scope}
+\end{scope}
+\draw[b2line,line width=0.5pt] (40.00,136.00) rectangle (84.00,178.04);
+\begin{scope}
+\clip (190.00,136.00) rectangle (234.00,178.04);
+\fill[white] (190.00,136.00) rectangle (234.00,178.04);
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (215.77,156.82) circle (10.42pt);\fill[blob2] (215.77,156.82) circle (6.95pt);\fill[blob1] (215.77,156.82) circle (3.47pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (202.89,168.37) circle (7.78pt);\fill[blob2] (202.89,168.37) circle (5.19pt);\fill[blob1] (202.89,168.37) circle (2.59pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (212.47,167.43) circle (6.84pt);\fill[blob2] (212.47,167.43) circle (4.56pt);\fill[blob1] (212.47,167.43) circle (2.28pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (195.58,153.91) circle (4.29pt);\fill[blob2] (195.58,153.91) circle (2.86pt);\fill[blob1] (195.58,153.91) circle (1.43pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (205.16,145.66) circle (3.54pt);\fill[blob2] (205.16,145.66) circle (2.36pt);\fill[blob1] (205.16,145.66) circle (1.18pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (224.57,151.79) circle (3.54pt);\fill[blob2] (224.57,151.79) circle (2.36pt);\fill[blob1] (224.57,151.79) circle (1.18pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (217.66,147.31) circle (2.00pt);\fill[blob2] (217.66,147.31) circle (1.34pt);\fill[blob1] (217.66,147.31) circle (0.67pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (225.36,166.49) circle (1.93pt);\fill[blob2] (225.36,166.49) circle (1.29pt);\fill[blob1] (225.36,166.49) circle (0.64pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (209.80,158.94) circle (1.89pt);\fill[blob2] (209.80,158.94) circle (1.26pt);\fill[blob1] (209.80,158.94) circle (0.63pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (226.30,143.15) circle (1.65pt);\fill[blob2] (226.30,143.15) circle (1.10pt);\fill[blob1] (226.30,143.15) circle (0.55pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (223.79,158.79) circle (1.53pt);\fill[blob2] (223.79,158.79) circle (1.02pt);\fill[blob1] (223.79,158.79) circle (0.51pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (230.70,155.64) circle (1.23pt);\fill[blob2] (230.70,155.64) circle (0.82pt);\fill[blob1] (230.70,155.64) circle (0.41pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (199.43,161.06) circle (0.99pt);\fill[blob2] (199.43,161.06) circle (0.66pt);\fill[blob1] (199.43,161.06) circle (0.33pt);\end{scope}
+\end{scope}
+\draw[b2line,line width=0.5pt] (190.00,136.00) rectangle (234.00,178.04);
+\begin{scope}
+\clip (288.00,136.00) rectangle (332.00,178.04);
+\fill[white] (288.00,136.00) rectangle (332.00,178.04);
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (313.61,156.90) circle (10.42pt);\fill[blob2] (313.61,156.90) circle (6.95pt);\fill[blob1] (313.61,156.90) circle (3.47pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (303.09,145.74) circle (7.90pt);\fill[blob2] (303.09,145.74) circle (5.26pt);\fill[blob1] (303.09,145.74) circle (2.63pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (322.34,151.79) circle (7.54pt);\fill[blob2] (322.34,151.79) circle (5.03pt);\fill[blob1] (322.34,151.79) circle (2.51pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (293.50,154.07) circle (3.77pt);\fill[blob2] (293.50,154.07) circle (2.51pt);\fill[blob1] (293.50,154.07) circle (1.26pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (315.66,147.47) circle (3.42pt);\fill[blob2] (315.66,147.47) circle (2.28pt);\fill[blob1] (315.66,147.47) circle (1.14pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (323.28,166.56) circle (3.30pt);\fill[blob2] (323.28,166.56) circle (2.20pt);\fill[blob1] (323.28,166.56) circle (1.10pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (300.89,168.53) circle (2.95pt);\fill[blob2] (300.89,168.53) circle (1.96pt);\fill[blob1] (300.89,168.53) circle (0.98pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (308.11,158.86) circle (2.36pt);\fill[blob2] (308.11,158.86) circle (1.57pt);\fill[blob1] (308.11,158.86) circle (0.79pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (307.72,167.51) circle (1.65pt);\fill[blob2] (307.72,167.51) circle (1.10pt);\fill[blob1] (307.72,167.51) circle (0.55pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (324.30,143.31) circle (1.60pt);\fill[blob2] (324.30,143.31) circle (1.07pt);\fill[blob1] (324.30,143.31) circle (0.53pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (321.79,158.86) circle (1.60pt);\fill[blob2] (321.79,158.86) circle (1.07pt);\fill[blob1] (321.79,158.86) circle (0.53pt);\end{scope}
+\end{scope}
+\draw[b2line,line width=0.5pt] (288.00,136.00) rectangle (332.00,178.04);
+\draw[b2arr,line width=0.6pt,-{Stealth[length=4.0pt,width=3.6pt,inset=0.8pt]}] (62.00,102.00) -- (62.00,136.00);
+\draw[b2arr,line width=0.6pt,-{Stealth[length=4.0pt,width=3.6pt,inset=0.8pt]}] (212.00,124.00) -- (212.00,136.00);
+\draw[b2arr,line width=0.6pt,-{Stealth[length=4.0pt,width=3.6pt,inset=0.8pt]}] (310.00,124.00) -- (310.00,136.00);
+\node[anchor=base west,inner sep=0pt,text=ink2,font={\fontsize{7.0}{8.40}\selectfont}] at (216.00,133.00) {run 1};
+\node[anchor=base west,inner sep=0pt,text=ink2,font={\fontsize{7.0}{8.40}\selectfont}] at (314.00,133.00) {run 2};
+\draw[b2arr,line width=0.6pt,-{Stealth[length=4.0pt,width=3.6pt,inset=0.8pt]}] (56.00,178.04) -- (35.00,197.00);
+\draw[b2arr,line width=0.6pt,-{Stealth[length=4.0pt,width=3.6pt,inset=0.8pt]}] (68.00,178.04) -- (89.00,197.00);
+\draw[b2arr,line width=0.6pt,-{Stealth[length=4.0pt,width=3.6pt,inset=0.8pt]}] (212.00,178.04) -- (212.00,197.00);
+\draw[b2arr,line width=0.6pt,-{Stealth[length=4.0pt,width=3.6pt,inset=0.8pt]}] (310.00,178.04) -- (310.00,197.00);
+\node[anchor=base west,inner sep=0pt,text=ink2,font={\fontsize{7.0}{8.40}\selectfont}] at (92.00,191.04) {random masking};
+\node[anchor=base,inner sep=0pt,text=ink2,font={\fontsize{7.0}{8.40}\selectfont}] at (261.00,191.04) {random masking};
+\path[fill=none,rounded corners=4pt,draw=b2blue,line width=0.8pt,dash pattern=on 2pt off 1.5pt] (7.00,197.00) rectangle (117.00,261.04);
+\path[fill=none,rounded corners=4pt,draw=b2blue,line width=0.8pt,dash pattern=on 2pt off 1.5pt] (184.00,197.00) rectangle (338.00,261.04);
+\begin{scope}
+\clip (13.00,204.00) rectangle (57.00,246.04);
+\fill[white] (13.00,204.00) rectangle (57.00,246.04);
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (38.77,224.82) circle (10.42pt);\fill[blob2] (38.77,224.82) circle (6.95pt);\fill[blob1] (38.77,224.82) circle (3.47pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (25.89,236.37) circle (7.78pt);\fill[blob2] (25.89,236.37) circle (5.19pt);\fill[blob1] (25.89,236.37) circle (2.59pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (35.47,235.43) circle (6.84pt);\fill[blob2] (35.47,235.43) circle (4.56pt);\fill[blob1] (35.47,235.43) circle (2.28pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (18.58,221.91) circle (4.29pt);\fill[blob2] (18.58,221.91) circle (2.86pt);\fill[blob1] (18.58,221.91) circle (1.43pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (28.16,213.66) circle (3.54pt);\fill[blob2] (28.16,213.66) circle (2.36pt);\fill[blob1] (28.16,213.66) circle (1.18pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (47.57,219.79) circle (3.54pt);\fill[blob2] (47.57,219.79) circle (2.36pt);\fill[blob1] (47.57,219.79) circle (1.18pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (40.66,215.31) circle (2.00pt);\fill[blob2] (40.66,215.31) circle (1.34pt);\fill[blob1] (40.66,215.31) circle (0.67pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (48.36,234.49) circle (1.93pt);\fill[blob2] (48.36,234.49) circle (1.29pt);\fill[blob1] (48.36,234.49) circle (0.64pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (32.80,226.94) circle (1.89pt);\fill[blob2] (32.80,226.94) circle (1.26pt);\fill[blob1] (32.80,226.94) circle (0.63pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (49.30,211.15) circle (1.65pt);\fill[blob2] (49.30,211.15) circle (1.10pt);\fill[blob1] (49.30,211.15) circle (0.55pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (46.79,226.79) circle (1.53pt);\fill[blob2] (46.79,226.79) circle (1.02pt);\fill[blob1] (46.79,226.79) circle (0.51pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (53.70,223.64) circle (1.23pt);\fill[blob2] (53.70,223.64) circle (0.82pt);\fill[blob1] (53.70,223.64) circle (0.41pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (22.43,229.06) circle (0.99pt);\fill[blob2] (22.43,229.06) circle (0.66pt);\fill[blob1] (22.43,229.06) circle (0.33pt);\end{scope}
+\fill[black,opacity=0.8] (24.79,204.00) rectangle (32.64,211.86) (32.64,204.00) rectangle (57.00,231.50) (48.36,231.50) rectangle (57.00,236.61) (20.86,233.86) rectangle (29.50,236.61) (20.86,236.61) rectangle (57.00,246.04);
+\end{scope}
+\draw[b2line,line width=0.5pt] (13.00,204.00) rectangle (57.00,246.04);
+\node[anchor=base,inner sep=0pt,text=ink,font={\fontsize{7.0}{8.40}\selectfont}] at (35.00,255.04) {context view};
+\begin{scope}
+\clip (67.00,204.00) rectangle (111.00,246.04);
+\fill[white] (67.00,204.00) rectangle (111.00,246.04);
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (92.77,224.82) circle (10.42pt);\fill[blob2] (92.77,224.82) circle (6.95pt);\fill[blob1] (92.77,224.82) circle (3.47pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (79.89,236.37) circle (7.78pt);\fill[blob2] (79.89,236.37) circle (5.19pt);\fill[blob1] (79.89,236.37) circle (2.59pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (89.47,235.43) circle (6.84pt);\fill[blob2] (89.47,235.43) circle (4.56pt);\fill[blob1] (89.47,235.43) circle (2.28pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (72.58,221.91) circle (4.29pt);\fill[blob2] (72.58,221.91) circle (2.86pt);\fill[blob1] (72.58,221.91) circle (1.43pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (82.16,213.66) circle (3.54pt);\fill[blob2] (82.16,213.66) circle (2.36pt);\fill[blob1] (82.16,213.66) circle (1.18pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (101.57,219.79) circle (3.54pt);\fill[blob2] (101.57,219.79) circle (2.36pt);\fill[blob1] (101.57,219.79) circle (1.18pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (94.66,215.31) circle (2.00pt);\fill[blob2] (94.66,215.31) circle (1.34pt);\fill[blob1] (94.66,215.31) circle (0.67pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (102.36,234.49) circle (1.93pt);\fill[blob2] (102.36,234.49) circle (1.29pt);\fill[blob1] (102.36,234.49) circle (0.64pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (86.80,226.94) circle (1.89pt);\fill[blob2] (86.80,226.94) circle (1.26pt);\fill[blob1] (86.80,226.94) circle (0.63pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (103.30,211.15) circle (1.65pt);\fill[blob2] (103.30,211.15) circle (1.10pt);\fill[blob1] (103.30,211.15) circle (0.55pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (100.79,226.79) circle (1.53pt);\fill[blob2] (100.79,226.79) circle (1.02pt);\fill[blob1] (100.79,226.79) circle (0.51pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (107.70,223.64) circle (1.23pt);\fill[blob2] (107.70,223.64) circle (0.82pt);\fill[blob1] (107.70,223.64) circle (0.41pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (76.43,229.06) circle (0.99pt);\fill[blob2] (76.43,229.06) circle (0.66pt);\fill[blob1] (76.43,229.06) circle (0.33pt);\end{scope}
+\fill[black,opacity=0.8,even odd rule] (67.00,204.00) rectangle (111.00,246.04) (90.57,207.54) rectangle (108.64,223.64);
+\end{scope}
+\draw[b2line,line width=0.5pt] (67.00,204.00) rectangle (111.00,246.04);
+\node[anchor=base,inner sep=0pt,text=ink,font={\fontsize{7.0}{8.40}\selectfont}] at (89.00,255.04) {target view};
+\begin{scope}
+\clip (190.00,204.00) rectangle (234.00,246.04);
+\fill[white] (190.00,204.00) rectangle (234.00,246.04);
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (215.77,224.82) circle (10.42pt);\fill[blob2] (215.77,224.82) circle (6.95pt);\fill[blob1] (215.77,224.82) circle (3.47pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (202.89,236.37) circle (7.78pt);\fill[blob2] (202.89,236.37) circle (5.19pt);\fill[blob1] (202.89,236.37) circle (2.59pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (212.47,235.43) circle (6.84pt);\fill[blob2] (212.47,235.43) circle (4.56pt);\fill[blob1] (212.47,235.43) circle (2.28pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (195.58,221.91) circle (4.29pt);\fill[blob2] (195.58,221.91) circle (2.86pt);\fill[blob1] (195.58,221.91) circle (1.43pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (205.16,213.66) circle (3.54pt);\fill[blob2] (205.16,213.66) circle (2.36pt);\fill[blob1] (205.16,213.66) circle (1.18pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (224.57,219.79) circle (3.54pt);\fill[blob2] (224.57,219.79) circle (2.36pt);\fill[blob1] (224.57,219.79) circle (1.18pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (217.66,215.31) circle (2.00pt);\fill[blob2] (217.66,215.31) circle (1.34pt);\fill[blob1] (217.66,215.31) circle (0.67pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (225.36,234.49) circle (1.93pt);\fill[blob2] (225.36,234.49) circle (1.29pt);\fill[blob1] (225.36,234.49) circle (0.64pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (209.80,226.94) circle (1.89pt);\fill[blob2] (209.80,226.94) circle (1.26pt);\fill[blob1] (209.80,226.94) circle (0.63pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (226.30,211.15) circle (1.65pt);\fill[blob2] (226.30,211.15) circle (1.10pt);\fill[blob1] (226.30,211.15) circle (0.55pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (223.79,226.79) circle (1.53pt);\fill[blob2] (223.79,226.79) circle (1.02pt);\fill[blob1] (223.79,226.79) circle (0.51pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (230.70,223.64) circle (1.23pt);\fill[blob2] (230.70,223.64) circle (0.82pt);\fill[blob1] (230.70,223.64) circle (0.41pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (199.43,229.06) circle (0.99pt);\fill[blob2] (199.43,229.06) circle (0.66pt);\fill[blob1] (199.43,229.06) circle (0.33pt);\end{scope}
+\fill[black,opacity=0.8] (201.79,204.00) rectangle (209.64,211.86) (209.64,204.00) rectangle (234.00,231.50) (225.36,231.50) rectangle (234.00,236.61) (197.86,233.86) rectangle (206.50,236.61) (197.86,236.61) rectangle (234.00,246.04);
+\end{scope}
+\draw[b2line,line width=0.5pt] (190.00,204.00) rectangle (234.00,246.04);
+\node[anchor=base,inner sep=0pt,text=ink,font={\fontsize{7.0}{8.40}\selectfont}] at (212.00,255.04) {context view};
+\begin{scope}
+\clip (288.00,204.00) rectangle (332.00,246.04);
+\fill[white] (288.00,204.00) rectangle (332.00,246.04);
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (313.61,224.90) circle (10.42pt);\fill[blob2] (313.61,224.90) circle (6.95pt);\fill[blob1] (313.61,224.90) circle (3.47pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (303.09,213.74) circle (7.90pt);\fill[blob2] (303.09,213.74) circle (5.26pt);\fill[blob1] (303.09,213.74) circle (2.63pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (322.34,219.79) circle (7.54pt);\fill[blob2] (322.34,219.79) circle (5.03pt);\fill[blob1] (322.34,219.79) circle (2.51pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (293.50,222.07) circle (3.77pt);\fill[blob2] (293.50,222.07) circle (2.51pt);\fill[blob1] (293.50,222.07) circle (1.26pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (315.66,215.47) circle (3.42pt);\fill[blob2] (315.66,215.47) circle (2.28pt);\fill[blob1] (315.66,215.47) circle (1.14pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (323.28,234.56) circle (3.30pt);\fill[blob2] (323.28,234.56) circle (2.20pt);\fill[blob1] (323.28,234.56) circle (1.10pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (300.89,236.53) circle (2.95pt);\fill[blob2] (300.89,236.53) circle (1.96pt);\fill[blob1] (300.89,236.53) circle (0.98pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (308.11,226.86) circle (2.36pt);\fill[blob2] (308.11,226.86) circle (1.57pt);\fill[blob1] (308.11,226.86) circle (0.79pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (307.72,235.51) circle (1.65pt);\fill[blob2] (307.72,235.51) circle (1.10pt);\fill[blob1] (307.72,235.51) circle (0.55pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (324.30,211.31) circle (1.60pt);\fill[blob2] (324.30,211.31) circle (1.07pt);\fill[blob1] (324.30,211.31) circle (0.53pt);\end{scope}
+\begin{scope}[transparency group,opacity=0.857]\fill[blob3] (321.79,226.86) circle (1.60pt);\fill[blob2] (321.79,226.86) circle (1.07pt);\fill[blob1] (321.79,226.86) circle (0.53pt);\end{scope}
+\fill[black,opacity=0.8,even odd rule] (288.00,204.00) rectangle (332.00,246.04) (311.57,207.54) rectangle (329.64,223.64);
+\end{scope}
+\draw[b2line,line width=0.5pt] (288.00,204.00) rectangle (332.00,246.04);
+\node[anchor=base,inner sep=0pt,text=ink,font={\fontsize{7.0}{8.40}\selectfont}] at (310.00,255.04) {target view};
+\draw[b2blue,line width=1.0pt,-{Stealth[length=4.0pt,width=3.6pt,inset=0.8pt]}] (184.00,225.02) -- (117.00,225.02);
+\node[anchor=base,inner sep=0pt,text=ink,font={\fontsize{7.0}{8.40}\selectfont}] at (150.50,212.52) {\textcolor{b2blue}{\textbf{drop-in}}};
+\node[anchor=base,inner sep=0pt,text=ink,font={\fontsize{7.0}{8.40}\selectfont}] at (150.50,221.02) {\textcolor{b2blue}{\textbf{replacement}}};
+\draw[b2arr,line width=0.6pt,-{Stealth[length=4.0pt,width=3.6pt,inset=0.8pt]}] (35.00,261.04) -- (35.00,270.04);
+\draw[b2arr,line width=0.6pt,-{Stealth[length=4.0pt,width=3.6pt,inset=0.8pt]}] (89.00,261.04) -- (89.00,270.04);
+\path[fill=b2panel,rounded corners=4pt] (7.00,270.04) rectangle (117.00,290.04);
+\node[anchor=base,inner sep=0pt,text=ink,font={\fontsize{7.5}{9.00}\selectfont}] at (62.00,283.04) {\textbf{I-JEPA$^{*}$ training}};
+\end{tikzpicture}
+\end{document}

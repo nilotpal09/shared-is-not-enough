@@ -1,0 +1,9 @@
+# Versions the paper's runs and checks used. The figures are byte-identical to the
+# paper's only with this matplotlib version.
+torch==2.6.0
+numpy==2.2.6
+scipy==1.14.0
+pandas==2.2.2
+matplotlib==3.9.1
+pyyaml==6.0.1
+# PyCaloFlash v1.0 (the simulator), installed separately: see README.md

@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+# generated: figures, probe sets, fits, rescored tables, training runs, checkpoints
+figures/*.png
+figures/*.pdf
+figures/*.npz
+figures/support_data.csv
+cache/
+checkpoints/
+runs/
+probe_fits/
+probe_fits_z1/
+raw_input/
+std_probe/
+results_rescored/
+/movement.csv
+/simulator_facts.csv
